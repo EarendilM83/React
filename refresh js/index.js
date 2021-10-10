@@ -67,26 +67,46 @@
 // another ex about classes
 // show book name and game based on it.
 
-class TheWitcher {
-  constructor() {
-    this.bookName = "The Witcher: The Last Wish";
-  }
-  printBookName() {
+// class TheWitcher {
+//   constructor() {
+//     this.bookName = "The Witcher: The Last Wish";
+//   }
+//   printBookName() {
+//     console.log(this.bookName);
+//   }
+// }
+
+// class TheWitcherGame extends TheWitcher {
+//   constructor() {
+//     super();
+//     this.gameName = "The Witcher: Wild Hunt";
+//   }
+
+//   printGameName() {
+//     console.log(this.gameName);
+//   }
+// }
+
+// const theWitcherName = new TheWitcherGame();
+// theWitcherName.printBookName();
+// theWitcherName.printGameName();
+
+// now the actual ES7  babel js method that can make above code way easier to read and write
+
+class TheWitcherBook {
+  bookName = "The Witcher: Last Wish";
+  printBookName = () => {
     console.log(this.bookName);
-  }
+  };
 }
 
-class TheWitcherGame extends TheWitcher {
-  constructor() {
-    super();
-    this.gameName = "The Witcher: Wild Hunt";
-  }
-
-  printGameName() {
+class TheWitcherGameES7 extends TheWitcherBook {
+  gameName = "The Witcher: Wild Hunt";
+  printGameName = () => {
     console.log(this.gameName);
-  }
+  };
 }
 
-const theWitcherName = new TheWitcherGame();
-theWitcherName.printBookName();
-theWitcherName.printGameName();
+const thewitcherbook = new TheWitcherGameES7();
+thewitcherbook.printBookName();
+thewitcherbook.printGameName();
