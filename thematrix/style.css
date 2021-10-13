@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+body {
+  background: #003;
+}
+
+canvas {
+  margin: 0px;
+  padding: 0px;
+}
