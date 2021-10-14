@@ -6,6 +6,11 @@ function ExpenseItem(props) {
   //   const expenseDate = new Date(2021, 2, 28);
   //   const expenseTitle = "Healthcare";
   //   const expenseAmount = 294.67;
+  let title = props.title;
+  const clickHandler = () => {
+    title = "Updated";
+    console.log("updated");
+  };
 
   return (
     <Card className="expense-item">
@@ -15,7 +20,7 @@ function ExpenseItem(props) {
         <h2>{props.title}</h2>
         <div className="expense-item__price">$ {props.amount}</div>
       </div>
-
+      <button onClick={clickHandler}>Click fkng me</button>
       {/* end element */}
     </Card>
   );
